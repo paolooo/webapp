@@ -1,6 +1,51 @@
 doctype html
 html
   head
-    title WebApp
+    meta(http-equiv='content-type', content='text/html; charset=utf-8')
+    title PriceGrabber API
   body
-    h1 Webapp
+    #prod-1
+      h1 Product 1
+      #prod-1-menu
+    script#template(type='x-tmpl-mustache').
+      <table>
+        {{#items}}
+        <tr>
+          <td><img src="{{ image }}"></td>
+          <td>{{ price }}</td>
+          <td><a href="{{ url }}" target="_blank">Buy</a></td>
+        </tr>
+        {{/items}}
+      </table>
+
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+    script(src='./bower_components/mustache/mustache.js')
+    script(src='./scripts/pricegrabber.js')
+    script(type='text/javascript')
+      :coffee-script
+        PriceGrabber.getProduct('Cuisinart DCC 2650&topcat_id=27&page_id=524').done (doc) ->
+
+          items = []
+          xml = $(doc)
+          products = xml.find('product')
+
+          $.each products, (index, value) ->
+            image = $(value).find('image_small').text()
+            url = $(value).find('url').text()
+            price = $($(value).find('price')[0]).text()
+
+            items.push
+              image: image
+              url: url
+              price: price
+
+            console.log items
+
+            template = $("#template").html()
+            Mustache.parse template
+            output = Mustache.render template, items: items
+
+            $('#prod-1-menu').html output
+
+            console.log output
+

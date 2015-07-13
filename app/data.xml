@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.pricegrabber.com/pg_2.55.xsd">
+    <version>2.55</version>
+    <api_request_id>5459bc9bd59dddc54e16546248c44c7</api_request_id>
+    <num_results>2</num_results>
+    <search_keyword>Cuisinart DCC 2650</search_keyword>
+    <pricegrabber_url>http://www.api.pricegrabber.com/appliances/coffee-makers++cuisinart-dcc-2650/p-524/?form_keyword=Cuisinart%2BDCC%2B2650</pricegrabber_url>
+    <pricegrabber_url_text>Cuisinart DCC 2650 by PriceGrabber.com</pricegrabber_url_text>
+    <partner_url>http://expertcontentnetwork.api.pgpartner.com</partner_url>
+    <market>us</market>
+    <result_category id="524" type="page" nr="2">Coffee Makers</result_category>
+    <page id="524">Coffee Makers</page>
+    <catzero id="74">Small Kitchen Appliances</catzero>
+    <topcat id="27">Appliances</topcat>
+    <product>
+        <url>http://expertcontentnetwork.api.pgpartner.com/mrdr.php?url=http%3A%2F%2Fexpertcontentnetwork.api.pgpartner.com%2Fsearch_getprod.php%3Fmasterid%3D780275624</url>
+        <masterid>780275624</masterid>
+        <title>DCC-2650 Extreme Brewâ¢ 12-Cup Programmable Coffeemaker</title>
+        <title_short>DCC-2650 Extreme Brewâ¢ 12-Cup Programmable Coffeemaker</title_short>
+        <image_small>http://d3vv6xw699rjh3.cloudfront.net/26fe4d-780275624_1_50.jpg</image_small>
+        <image_medium>http://d3vv6xw699rjh3.cloudfront.net/3a325a-780275624_1_75.jpg</image_medium>
+        <image_large>http://d3vv6xw699rjh3.cloudfront.net/56910b-780275624_1_125.jpg</image_large>
+        <image_160>http://d3vv6xw699rjh3.cloudfront.net/8b4c54-780275624_1_160.jpg</image_160>
+        <has_image>y</has_image>
+        <manufacturer>Cuisinart</manufacturer>
+        <partnum>DCC2650</partnum>
+        <topcat id="27">Appliances</topcat>
+        <catzero id="74">Small Kitchen Appliances</catzero>
+        <page id="524">Coffee Makers</page>
+        <num_reviews>4</num_reviews>
+        <rating>4.50</rating>
+        <rating_image>http://cfsi.pgcdn.com/images/rating_4_5_newr.gif</rating_image>
+        <price sellers="3" qlty="all">$99.95</price>
+        <price qlty="n">$99.95</price>
+        <price qlty="r">$99.99</price>
+        <num_sellers qlty="all" desc="All">3</num_sellers>
+        <num_sellers qlty="n" desc="New">2</num_sellers>
+        <num_sellers qlty="r" desc="Refurbished">1</num_sellers>
+    </product>
+    <product>
+        <url>http://expertcontentnetwork.api.pgpartner.com/mrdr.php?url=http%3A%2F%2Fexpertcontentnetwork.api.pgpartner.com%2Fsearch_getprod.php%3Fmasterid%3D1709834629</url>
+        <masterid>1709834629</masterid>
+        <title>Dcc-2650 Black Wrinkle 12-cups Brew Central Programmable Coffeemaker</title>
+        <title_short>Dcc-2650 Black Wrinkle 12-cups Brew Central Programmable Coffeemaker</title_short>
+        <image_small>http://d3vv6xw699rjh3.cloudfront.net/5efd75-1709834629_1_50.jpg</image_small>
+        <image_medium>http://d3vv6xw699rjh3.cloudfront.net/e7bfae-1709834629_1_75.jpg</image_medium>
+        <image_large>http://d3vv6xw699rjh3.cloudfront.net/69455e-1709834629_1_125.jpg</image_large>
+        <image_160>http://d3vv6xw699rjh3.cloudfront.net/9255d3-1709834629_1_160.jpg</image_160>
+        <has_image>y</has_image>
+        <manufacturer>Cuisinart</manufacturer>
+        <partnum>DCC2650BW</partnum>
+        <topcat id="27">Appliances</topcat>
+        <catzero id="74">Small Kitchen Appliances</catzero>
+        <page id="524">Coffee Makers</page>
+        <rating>0</rating>
+        <price sellers="2" qlty="all">$72.38</price>
+        <price qlty="n">$72.38</price>
+        <num_sellers qlty="all" desc="All">2</num_sellers>
+        <num_sellers qlty="n" desc="New">2</num_sellers>
+    </product>
+</document>
