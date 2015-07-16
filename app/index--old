@@ -1,0 +1,53 @@
+doctype html
+html
+  head
+    meta(http-equiv='content-type', content='text/html; charset=utf-8')
+    title PriceGrabber API
+
+    // build:css(.tmp) styles/app.css
+    link(rel="stylesheet", href="styles/pricegrabber.css")
+    // endbuild
+
+    // build:css(.) styles/vendor.css
+    // bower:css
+    link(rel="stylesheet", href="bower_components/bootstrap/dist/css/bootstrap.css")
+    // endbower
+    // endbuild
+  body
+
+    .container
+      #prod-1
+        h1 Product 1
+
+      .pricegrabber.panel.panel-default.col-xs-6
+        .table-data
+
+    script#template(type='x-tmpl-mustache').
+      <table class="table table-hover">
+        <tbody>
+          {{#items}}
+          <tr>
+            <td><img src="{{ image }}"></td>
+            <td>{{ price }}</td>
+            <td><a href="{{ url }}" target="_blank" class="btn btn-primary">Buy</a></td>
+          </tr>
+          {{/items}}
+        </tbody>
+      </table>
+
+    // build:js(.) scripts/vendor.js
+    // bower:js
+    script(src='bower_components/jquery/dist/jquery.min.js')
+    script(src='bower_components/mustache/mustache.js')
+    // endbower
+    // endbuild
+
+    // build:js(.tmp) scripts/pricegrabber.js
+    script(src='scripts/pricegrabber.js')
+    // endbuild
+
+    script(type='text/javascript')
+      :coffee-script
+        PriceGrabber.getProduct('Cuisinart DCC 2650&topcat_id=27&page_id=524')
+
+

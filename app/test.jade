@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    meta(http-equiv='content-type', content='text/html; charset=utf-8')
+    title PriceGrabber API
+
+    // build:css(.tmp) styles/pricegrabber.css
+    link(rel="stylesheet", href="styles/pricegrabber.css")
+    // endbuild
+
+    // build:css(.) styles/bootstrap.css
+    // bower:css
+    link(rel="stylesheet", href="bower_components/bootstrap/dist/css/bootstrap.css")
+    // endbower
+    // endbuild
+
+    // build:js(.) scripts/jquery-mustache.js
+    // bower:js
+    script(src='bower_components/jquery/dist/jquery.min.js')
+    script(src='bower_components/mustache/mustache.js')
+    // endbower
+    // endbuild
+
+    // build:js(.tmp) scripts/pricegrabber.js
+    script(src='scripts/pricegrabber.js')
+    // endbuild
+  body
+
+    .container
+      #prod-1
+        h1 Product 1
+
+      script#p1.pricegrabber.panel.panel-default.col-xs-6(type='text/javascript')
+        :coffee-script
+          $('#p1').PriceGrabber
+            search: '&masterid=36289274'
+
+      script#p2.pricegrabber.panel.panel-default.col-xs-6(type='text/javascript')
+        :coffee-script
+          $('#p2').PriceGrabber
+            search: '&masterid=862769995'

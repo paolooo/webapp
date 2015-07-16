@@ -10,3 +10,7 @@ $ cd webapp
 $ npm install
 $ grunt serve
 ```
+
+## Links
+
+http://phuse.ca/short-circuits-using-jade-templates-with-yeoman/
