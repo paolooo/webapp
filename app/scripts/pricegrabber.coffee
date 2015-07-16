@@ -43,15 +43,16 @@ $.fn.extend
 
       $.each products, (index, value) ->
         image = $(value).find('image_small').text() || $(value).find('retailer_logo').text()
-        url = $(value).find('product > url').text()
+        url = $($(value).find('url')[0]).text()
         price = $($(value).find('price')[0]).text()
         rating_image = $(value).find('rating_image').text()
 
-        items.push
-          image: image
-          url: url
-          price: price
-          rating_image: rating_image
+        if price != '$'
+          items.push
+            image: image
+            url: url
+            price: price
+            rating_image: rating_image
 
       items
 

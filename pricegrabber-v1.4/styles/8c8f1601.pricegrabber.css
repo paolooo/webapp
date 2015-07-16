@@ -1,13 +1,1 @@
-.pricegrabber table {
-    margin-top: 0px;
-    margin-bottom: 10px;
-}
-
-.pricegrabber table tbody tr td {
-    text-align: center;
-    vertical-align: middle;
-}
-
-.pricegrabber tbody tr:first-child td {
-    border-top: 0;
-}
+.pricegrabber table{margin-top:0;margin-bottom:10px}.pricegrabber table tbody tr td{text-align:center;vertical-align:middle}.pricegrabber tbody tr:first-child td{border-top:0}
