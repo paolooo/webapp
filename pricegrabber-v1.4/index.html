@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>README</title>
+    <link rel="stylesheet" href="styles/8c8f1601.pricegrabber.css"/>
+    <link rel="stylesheet" href="styles/4245f5e3.bootstrap.css"/>
+    <script src="scripts/a314900f.jquery.min.js"></script>
+    <script src="scripts/1e8ea00d.mustache.min.js"></script>
+    
+    <script src="scripts/45f6d89a.pricegrabber.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Installation</h1>
+      <p>Add the following libraries before &lt;/head> tag.</p>
+      <div class="highlight">
+        <pre>&lt;link rel="stylesheet" href="bootstrap.css" />
+&lt;link rel="stylesheet" href="pricegrabber.css" />
+&nbsp;
+&lt;script type="text/javascript" src="jquery.min.js" >&lt;/script>
+&lt;script type="text/javascript" src="mustache.min.js" >&lt;/script>
+&lt;script type="text/javascript" src="pricegrabber.js" >&lt;/script></pre>
+      </div>
+      <hr>
+      <p>Add the following inside &lt;body> tag. By inserting the script below on any location of html doc. It will generate a list of products.</p>
+      <div class="highlight">
+        <pre>&lt;script type="text/javascript" class="pricegrabber panel panel-default" id="pg-dcc-2000">
+  $('#pg-dcc-2000').PriceGrabber({
+    search: 'Cuisinart DCC-2000 Coffee Maker' // search keywords
+  });</pre>
+      </div>
+      <div class="highlight">
+        <pre>&lt;script type="text/javascript" class="pricegrabber panel panel-default" id="pg2">
+  $('#pg2').PriceGrabber({
+    search: '&amp;masterid=9273146' // search via masterid
+  });
+&lt;/script> &lt;/script></pre>
+      </div>
+      <hr>
+      <hr>
+      <h2>Sample HTML</h2>
+      <div class="highlight">
+        <pre>&lt;!DOCTYPE html>
+&lt;html>
+  &lt;head>
+    &lt;meta http-equiv="content-type" content="text/html; charset=utf-8">
+    &nbsp;
+    &lt;link rel="stylesheet" href="styles/bootstrap.css"/>
+    &lt;link rel="stylesheet" href="styles/pricegrabber.css"/>
+    &nbsp;
+    &lt;script src="scripts/jquery.min.js">&lt;/script>
+    &lt;script src="scripts/mustache.min.js">&lt;/script>
+    &lt;script src="scripts/pricegrabber.js">&lt;/script>
+  &lt;/head>
+    &nbsp;
+  &lt;body>
+    &nbsp;
+    &lt;div class="container">
+      &lt;script type="text/javascript" class="pricegrabber panel panel-default col-xs-6" id="result-1">
+        $('#result-1').PriceGrabber({
+          search: 'Cuisinart DCC 2650&topcat_id=27&page_id=524'
+        });
+      &lt;/script>
+    &nbsp;
+    &lt;/div>
+    &nbsp;
+  &lt;/body>
+&lt;/html></pre>
+      </div>
+      <h2>Output</h2>
+      <script type="text/javascript" class="pricegrabber panel panel-default col-xs-6">(function() {
+  window.onload = function() {
+    return $('.pricegrabber').PriceGrabber({
+      search: 'Cuisinart DCC 2650&topcat_id=27&page_id=524'
+    });
+  };
+
+}).call(this);
+
+      </script>
+      <h2 style="clear: both">Another Example</h2><a href="coffee-reviews.html">Coffee Reviews</a>
+    </div>
+  </body>
+</html>

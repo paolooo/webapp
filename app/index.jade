@@ -42,7 +42,8 @@ html
           | &lt;link rel="stylesheet" href="bootstrap.css" />
           | &lt;link rel="stylesheet" href="pricegrabber.css" />
           | &nbsp;
-          | &lt;script type="text/javascript" src="jquery-mustache.js" >&lt;/script>
+          | &lt;script type="text/javascript" src="jquery.min.js" >&lt;/script>
+          | &lt;script type="text/javascript" src="mustache.min.js" >&lt;/script>
           | &lt;script type="text/javascript" src="pricegrabber.js" >&lt;/script>
 
       hr
@@ -53,7 +54,14 @@ html
           |   $('#pg-dcc-2000').PriceGrabber({
           |     search: 'Cuisinart DCC-2000 Coffee Maker' // search keywords
           |   });
-          | &lt;/script>
+
+      .highlight
+        pre
+          | &lt;script type="text/javascript" class="pricegrabber panel panel-default" id="pg2">
+          |   $('#pg2').PriceGrabber({
+          |     search: '&amp;masterid=9273146' // search via masterid
+          |   });
+          | &lt;/script> &lt;/script>
 
       hr
       hr
@@ -68,7 +76,8 @@ html
           |     &lt;link rel="stylesheet" href="styles/bootstrap.css"/>
           |     &lt;link rel="stylesheet" href="styles/pricegrabber.css"/>
           |     &nbsp;
-          |     &lt;script src="scripts/jquery-mustach.js">&lt;/script>
+          |     &lt;script src="scripts/jquery.min.js">&lt;/script>
+          |     &lt;script src="scripts/mustache.min.js">&lt;/script>
           |     &lt;script src="scripts/pricegrabber.js">&lt;/script>
           |   &lt;/head>
           |     &nbsp;
@@ -77,7 +86,7 @@ html
           |     &lt;div class="container">
           |       &lt;script type="text/javascript" class="pricegrabber panel panel-default col-xs-6" id="result-1">
           |         $('#result-1').PriceGrabber({
-          |           search: 'Cuisinart DCC 2650'
+          |           search: 'Cuisinart DCC 2650&topcat_id=27&page_id=524'
           |         });
           |       &lt;/script>
           |     &nbsp;
@@ -93,4 +102,8 @@ html
           window.onload = ->
             $('.pricegrabber').PriceGrabber
               search: 'Cuisinart DCC 2650&topcat_id=27&page_id=524'
+
+      h2(style="clear: both") Another Example
+
+      a(href="coffee-reviews.html") Coffee Reviews
 
