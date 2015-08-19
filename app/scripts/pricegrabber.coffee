@@ -4,7 +4,9 @@
       that = @
       options = $.extend {
         api_url: '/pricegrabber/api.php'
-        template: '<table class="table table-hover">
+        template: '
+          {{#items}}
+          <table class="table table-hover">
               <tbody>
                 {{#items}}
                 <tr>
@@ -15,9 +17,13 @@
                 </tr>
                 {{/items}}
               </tbody>
-            </table>'
+            </table>
+          {{/items}}
+          {{^items}}
+            <span>Sorry, no item found.</span>
+          {{/items}}
+        '
       }, options
-
 
       container = '<div class="' + that.attr('class') + '" id="' + that.attr('id') + '"></div>'
 
@@ -39,7 +45,6 @@
           items = items.concat getProductItems offers, image
         items
 
-
       getProductItems = (products, product_image) ->
         items = []
 
@@ -55,7 +60,6 @@
               url: url
               price: price
               rating_image: rating_image
-
         items
 
       getProduct = (keyword) ->
@@ -69,6 +73,8 @@
             count_offers = $(products).find('offer').length
 
             items = if count_offers > 0 then getProductOffers products else getProductItems products
+
+            # return $(container).remove() unless items.length
 
             Mustache.parse template
             output = Mustache.render template, items: items
