@@ -10,10 +10,10 @@
               <tbody>
                 {{#items}}
                 <tr>
-                  <td><img src="{{ image }}"></td>
+                  <td><span class="product-name">{{ product_name }}</span></td>
                   <td><img src="{{ rating_image }}"></td>
-                  <td>{{ price }}</td>
-                  <td><a href="{{ url }}" target="_blank" class="btn btn-primary">Buy</a></td>
+                  <td><span class="price">{{ price }}</span></td>
+                  <td><a href="{{ url }}" target="_blank" class="btn btn-primary">Go to Store</a></td>
                 </tr>
                 {{/items}}
               </tbody>
@@ -42,24 +42,30 @@
         $.each products, (index, value) ->
           offers = $(value).find 'offer'
           image = $(value).find('image_small').text()
-          items = items.concat getProductItems offers, image
+          product_name = $(value).find('title').text()
+          items = items.concat getProductItems offers,
+            image: image
+            product_name: product_name
         items
 
-      getProductItems = (products, product_image) ->
+      getProductItems = (products, item) ->
         items = []
 
         $.each products, (index, value) ->
-          image = $(value).find('image_small').text() || $(value).find('retailer_logo').text() || product_image
+          image = $(value).find('image_small').text() || $(value).find('retailer_logo').text() || (item && item.image)
+          product_name = (item && item.product_name) || $(value).find('title').text()
           url = $($(value).find('url')[0]).text()
           price = $($(value).find('price')[0]).text()
           rating_image = $($(value).find('rating_image')[0]).text()
 
           if price != '$'
             items.push
+              product_name: product_name
               image: image
               url: url
               price: price
               rating_image: rating_image
+
         items
 
       getProduct = (keyword) ->
